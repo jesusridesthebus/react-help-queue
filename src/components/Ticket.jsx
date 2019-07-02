@@ -1,19 +1,19 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
 function Ticket(props){
-  var ticketStyles = {
-    backgroundColor: '#ecf0f1',
-    fontFamily: 'sans-serif',
-    paddingTop: '50px'
-  }
   return (
-      <div style={ticketStyles}>
-        <h3>{props.location} - {props.names}</h3>
-        <p><em>{props.issue}</em></p>
-        <hr/>
-      </div>
-   );
+    <div>
+        <style global jsx>{`
+          div {
+            background-color: red;
+          }
+        `}</style>
+      <h3>{props.location} - {props.names}</h3>
+      <p><em>{props.issue}</em></p>
+      <hr/>
+    </div>
+  );
 }
 
 Ticket.propTypes = {
